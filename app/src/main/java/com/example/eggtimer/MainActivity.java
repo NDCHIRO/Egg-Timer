@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.P)
     public void startTimer(View view) {
         startButton = findViewById(R.id.timeerButton);
+        //button is clicked first time so counter starts and seekbar is disabled
         if (noOfClicks==0)
         {
             noOfClicks=1;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }.start();
 
         }
+        //button is clicked again to stop so the app will reset
         else
         {
             resetTimer();
